@@ -25,7 +25,7 @@ const highlights = [
 
 const team = [
   {
-    name: "Mr.Aslam Baig",
+    name: "Aslam Baig",
     role: "Laravel Developer",
     bio: "Skilled backend engineer specializing in Laravel, PHP, and CRM systems. Builds robust, scalable APIs and full-stack web applications powering Nyrogen's enterprise products.",
     photo: aslam-baig.jpg,
@@ -138,7 +138,7 @@ export default function AboutPage() {
         </Container>
       </section>
 
- {/* ── CEO MESSAGE ─────────────────────────────────── */}
+{/* ── CEO MESSAGE ─────────────────────────────────── */}
       <section className="mb-24 relative overflow-hidden">
         <Container>
           <div className="text-center mb-14">
@@ -222,6 +222,98 @@ export default function AboutPage() {
           </div>
         </Container>
       </section>
+      
+{/* ── CFO MESSAGE ─────────────────────────────────── */}
+      <section className="mb-24 relative overflow-hidden">
+        <Container>
+          <div className="text-center mb-14">
+            <span className="text-accent-blue font-semibold text-sm uppercase tracking-widest">Leadership</span>
+            <h2 className="text-4xl font-bold text-white mt-3">
+              Message from the <span className="text-blue-gradient">CFO</span>
+            </h2>
+          </div>
+
+          <div className="max-w-5xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }} transition={{ duration: 0.7 }}
+            >
+              <div className="relative rounded-3xl border border-charcoal-border bg-charcoal-card overflow-hidden hover:border-accent-blue/30 transition-all duration-300 hover:shadow-[0_0_50px_rgba(37,99,235,0.15)]">
+                <div className="h-1 w-full bg-gradient-to-r from-royal-blue via-accent-blue to-light-blue" />
+
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-0">
+                  {/* Photo side */}
+                  <div className="lg:col-span-4 relative min-h-[340px] overflow-hidden flex flex-col items-center justify-center bg-gradient-to-br from-royal-blue/10 to-charcoal p-10">
+                    <div className="absolute inset-0 grid-bg opacity-15" />
+                    <div className="relative z-10">
+                      <div className="relative w-44 h-44 mx-auto">
+                        <div className="absolute inset-0 rounded-full border-2 border-accent-blue/40 animate-spin-slow" style={{ margin: "-8px" }} />
+                        <div className="absolute inset-0 rounded-full shadow-[0_0_30px_rgba(37,99,235,0.5)]" />
+                        <div className="w-44 h-44 rounded-full overflow-hidden border-4 border-royal-blue/50 relative">
+                          <Image
+                            src="/cfo-aslam-baig.jpg"
+                            alt="Mr. Aslam Baig – CFO"
+                            fill
+                            className="object-cover object-center"
+                            sizes="176px"
+                            priority
+                          />
+                        </div>
+                      </div>
+                      <div className="text-center mt-6">
+                        <h3 className="text-xl font-bold text-white">Mr. Aslam Baig</h3>
+                        <p className="text-accent-blue font-semibold text-sm mt-1 tracking-wide">Chief Financial Officer</p>
+                        <p className="text-gray-400 text-xs mt-1">Nyrogen Technologies</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Message side */}
+                  <div className="lg:col-span-8 p-8 md:p-12 flex flex-col justify-center">
+                    <Quote className="text-royal-blue/40 mb-6" size={48} strokeWidth={1.5} />
+                    <blockquote className="space-y-4 text-gray-300 text-lg leading-relaxed mb-8">
+                      <p>
+                        Behind every product we ship at Nyrogen Technologies is a simple financial discipline:
+                        build things that are sustainable, not just impressive. Growth means nothing if it
+                        isn&apos;t built on a foundation that can support the next ten years, not just the next
+                        ten projects.
+                      </p>
+                      <p>
+                        My role is to make sure every dollar we invest — in our engineers, our infrastructure,
+                        our research — comes back multiplied in the value we deliver to clients. That discipline
+                        is why we&apos;ve been able to scale to 17+ enterprise products without ever cutting
+                        corners on quality or compromising the trust our clients place in us.
+                      </p>
+                      <p>
+                        We treat every client engagement as a long-term investment, not a transaction. That
+                        means transparent pricing, honest timelines, and a commitment to delivering measurable
+                        ROI — because at the end of the day, our growth is only real if it&apos;s built on
+                        yours.
+                      </p>
+                      <p>
+                        That&apos;s the financial philosophy behind everything we build — and it&apos;s one
+                        I stand behind on every project, every quarter, every year.
+                      </p>
+                    </blockquote>
+                    <div className="flex items-center gap-4 pt-6 border-t border-charcoal-border">
+                      <div>
+                        <p className="font-bold text-white text-lg">Aslam Baig</p>
+                        <p className="text-accent-blue text-sm font-semibold">CFO, Nyrogen Technologies</p>
+                      </div>
+                      <div className="ml-auto hidden sm:block">
+                        <svg width="120" height="40" viewBox="0 0 120 40" fill="none" className="opacity-40">
+                          <path d="M5 30 Q20 5 40 20 Q55 32 70 15 Q90 0 115 20" stroke="#3B82F6" strokeWidth="2" strokeLinecap="round" fill="none" />
+                          <path d="M10 35 Q30 28 50 32" stroke="#3B82F6" strokeWidth="1.5" strokeLinecap="round" fill="none" opacity="0.5"/>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </Container>
+      </section>
 
       {/* ── TEAM ────────────────────────────────────────── */}
       <section className="mb-24 bg-charcoal-soft border-y border-charcoal-border py-24 relative overflow-hidden">
@@ -289,7 +381,7 @@ export default function AboutPage() {
         </Container>
       </section>
 
-     
+      
 
       {/* ── CORE VALUES ─────────────────────────────────── */}
       <section className="mb-24 bg-charcoal-soft border-y border-charcoal-border py-24">
