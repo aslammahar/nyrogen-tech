@@ -138,73 +138,7 @@ export default function AboutPage() {
         </Container>
       </section>
 
-      {/* ── TEAM ────────────────────────────────────────── */}
-      <section className="mb-24 bg-charcoal-soft border-y border-charcoal-border py-24 relative overflow-hidden">
-        <div className="absolute inset-0 -z-10 grid-bg opacity-20" />
-        <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_60%_50%_at_50%_50%,rgba(37,99,235,0.08),transparent)]" />
-
-        <Container>
-          <div className="text-center mb-14">
-            <span className="text-accent-blue font-semibold text-sm uppercase tracking-widest">The Team</span>
-            <h2 className="text-4xl font-bold text-white mt-3 mb-4">
-              Meet the <span className="text-blue-gradient">People Behind Nyrogen</span>
-            </h2>
-            <p className="text-gray-400 max-w-2xl mx-auto">
-              World-class engineers, designers, and marketers committed to delivering exceptional digital products.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {team.map((member, idx) => (
-              <motion.div key={member.name}
-                initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }} transition={{ duration: 0.5, delay: idx * 0.1 }}
-              >
-                <div className="group rounded-3xl border border-charcoal-border bg-charcoal-card p-7 text-center hover:border-accent-blue/50 transition-all duration-300 hover:shadow-[0_0_36px_rgba(37,99,235,0.22)] relative overflow-hidden h-full">
-                  <div className="absolute inset-0 bg-gradient-to-br from-royal-blue/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  <div className="relative z-10 flex flex-col items-center">
-
-                    {/* Avatar */}
-                    <div className="relative w-24 h-24 mx-auto mb-5">
-                      <div
-                        className="absolute rounded-full border border-accent-blue/25 group-hover:border-accent-blue/60 transition-colors animate-spin-slow"
-                        style={{ inset: "-6px" }}
-                      />
-                      <div className="w-24 h-24 rounded-full overflow-hidden border-2 border-royal-blue/30 group-hover:border-accent-blue/60 transition-colors relative">
-                        {member.photo ? (
-                          <Image
-                            src={member.photo}
-                            alt={member.name}
-                            fill
-                            className="object-cover object-top"
-                            sizes="96px"
-                          />
-                        ) : (
-                          <div className={`w-full h-full bg-gradient-to-br ${member.color} flex items-center justify-center`}>
-                            <span className="text-2xl font-bold text-white">{member.initials}</span>
-                          </div>
-                        )}
-                      </div>
-                    </div>
-
-                    <h3 className="text-lg font-bold text-white mb-1 group-hover:text-accent-blue transition-colors">
-                      {member.name}
-                    </h3>
-                    <span className="inline-block text-xs font-bold px-3 py-1 rounded-full border border-royal-blue/30 bg-royal-blue/10 text-accent-blue mb-4">
-                      {member.role}
-                    </span>
-                    <p className="text-sm text-gray-400 leading-relaxed group-hover:text-gray-300 transition-colors">
-                      {member.bio}
-                    </p>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </Container>
-      </section>
-
-      {/* ── CEO MESSAGE ─────────────────────────────────── */}
+ {/* ── CEO MESSAGE ─────────────────────────────────── */}
       <section className="mb-24 relative overflow-hidden">
         <Container>
           <div className="text-center mb-14">
@@ -288,6 +222,74 @@ export default function AboutPage() {
           </div>
         </Container>
       </section>
+      
+      {/* ── TEAM ────────────────────────────────────────── */}
+      <section className="mb-24 bg-charcoal-soft border-y border-charcoal-border py-24 relative overflow-hidden">
+        <div className="absolute inset-0 -z-10 grid-bg opacity-20" />
+        <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_60%_50%_at_50%_50%,rgba(37,99,235,0.08),transparent)]" />
+
+        <Container>
+          <div className="text-center mb-14">
+            <span className="text-accent-blue font-semibold text-sm uppercase tracking-widest">The Team</span>
+            <h2 className="text-4xl font-bold text-white mt-3 mb-4">
+              Meet the <span className="text-blue-gradient">People Behind Nyrogen</span>
+            </h2>
+            <p className="text-gray-400 max-w-2xl mx-auto">
+              World-class engineers, designers, and marketers committed to delivering exceptional digital products.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {team.map((member, idx) => (
+              <motion.div key={member.name}
+                initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }} transition={{ duration: 0.5, delay: idx * 0.1 }}
+              >
+                <div className="group rounded-3xl border border-charcoal-border bg-charcoal-card p-7 text-center hover:border-accent-blue/50 transition-all duration-300 hover:shadow-[0_0_36px_rgba(37,99,235,0.22)] relative overflow-hidden h-full">
+                  <div className="absolute inset-0 bg-gradient-to-br from-royal-blue/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <div className="relative z-10 flex flex-col items-center">
+
+                    {/* Avatar */}
+                    <div className="relative w-24 h-24 mx-auto mb-5">
+                      <div
+                        className="absolute rounded-full border border-accent-blue/25 group-hover:border-accent-blue/60 transition-colors animate-spin-slow"
+                        style={{ inset: "-6px" }}
+                      />
+                      <div className="w-24 h-24 rounded-full overflow-hidden border-2 border-royal-blue/30 group-hover:border-accent-blue/60 transition-colors relative">
+                        {member.photo ? (
+                          <Image
+                            src={member.photo}
+                            alt={member.name}
+                            fill
+                            className="object-cover object-top"
+                            sizes="96px"
+                          />
+                        ) : (
+                          <div className={`w-full h-full bg-gradient-to-br ${member.color} flex items-center justify-center`}>
+                            <span className="text-2xl font-bold text-white">{member.initials}</span>
+                          </div>
+                        )}
+                      </div>
+                    </div>
+
+                    <h3 className="text-lg font-bold text-white mb-1 group-hover:text-accent-blue transition-colors">
+                      {member.name}
+                    </h3>
+                    <span className="inline-block text-xs font-bold px-3 py-1 rounded-full border border-royal-blue/30 bg-royal-blue/10 text-accent-blue mb-4">
+                      {member.role}
+                    </span>
+                    <p className="text-sm text-gray-400 leading-relaxed group-hover:text-gray-300 transition-colors">
+                      {member.bio}
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </Container>
+      </section>
+
+     
 
       {/* ── CORE VALUES ─────────────────────────────────── */}
       <section className="mb-24 bg-charcoal-soft border-y border-charcoal-border py-24">
