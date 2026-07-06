@@ -25,7 +25,7 @@ const highlights = [
 
 const team = [
   {
-    name: "Aslam Baig",
+    name: "Mr.Aslam Baig",
     role: "Laravel Developer",
     bio: "Skilled backend engineer specializing in Laravel, PHP, and CRM systems. Builds robust, scalable APIs and full-stack web applications powering Nyrogen's enterprise products.",
     photo: aslam-baig.jpg,
@@ -222,7 +222,7 @@ export default function AboutPage() {
           </div>
         </Container>
       </section>
-      
+
       {/* ── TEAM ────────────────────────────────────────── */}
       <section className="mb-24 bg-charcoal-soft border-y border-charcoal-border py-24 relative overflow-hidden">
         <div className="absolute inset-0 -z-10 grid-bg opacity-20" />
