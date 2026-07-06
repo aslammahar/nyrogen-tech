@@ -8,10 +8,10 @@ import Image from "next/image";
 import Link from "next/link";
 
 const values = [
-  { title: "Innovation First",     desc: "We continuously push boundaries to deliver cutting-edge digital solutions.", icon: "🚀" },
-  { title: "Quality Obsessed",     desc: "Strict quality standards ensure every product is robust, secure, and reliable.", icon: "✅" },
-  { title: "Client Partnership",   desc: "Your success is our success. We work as an extension of your team.", icon: "🤝" },
-  { title: "Integrity Always",     desc: "Full transparency, honesty, and professional ethics in every engagement.", icon: "🛡️" },
+  { title: "Innovation First",   desc: "We continuously push boundaries to deliver cutting-edge digital solutions.", icon: "🚀" },
+  { title: "Quality Obsessed",   desc: "Strict quality standards ensure every product is robust, secure, and reliable.", icon: "✅" },
+  { title: "Client Partnership", desc: "Your success is our success. We work as an extension of your team.", icon: "🤝" },
+  { title: "Integrity Always",   desc: "Full transparency, honesty, and professional ethics in every engagement.", icon: "🛡️" },
 ];
 
 const highlights = [
@@ -25,18 +25,36 @@ const highlights = [
 
 const team = [
   {
-    name: "Mr. Yousuf Asim",
-    role: "Chief Executive Officer",
-    bio: "Visionary leader with decades of experience in enterprise software and digital transformation. Yousuf founded Nyrogen Technologies with a mission to make world-class software accessible to businesses of every size.",
-    photo: "/ceo-yousuf-asim.jpg",
-    initials: "YA",
-  },
-  {
     name: "Aslam Baig",
     role: "Laravel Developer",
-    bio: "Skilled backend engineer specializing in Laravel, PHP, and CRM systems. Aslam builds robust, scalable APIs and full-stack web applications that power Nyrogen's enterprise products.",
-    photo: null,
+    bio: "Skilled backend engineer specializing in Laravel, PHP, and CRM systems. Builds robust, scalable APIs and full-stack web applications powering Nyrogen's enterprise products.",
+    photo: "/aslam-baig.jpg",
     initials: "AB",
+    color: "from-royal-blue to-accent-blue",
+  },
+  {
+    name: "Saeed",
+    role: "Graphic Designer",
+    bio: "Creative designer with a sharp eye for visual storytelling. Crafts stunning brand identities, UI components, and marketing assets that make Nyrogen's products stand out.",
+    photo: null,
+    initials: "S",
+    color: "from-purple-600 to-purple-400",
+  },
+  {
+    name: "Sara",
+    role: "Sales Manager",
+    bio: "Results-driven sales professional who builds lasting client relationships. Sara leads Nyrogen's sales pipeline and ensures every client finds the right solution for their needs.",
+    photo: null,
+    initials: "S",
+    color: "from-emerald-600 to-emerald-400",
+  },
+  {
+    name: "Alishba Khan",
+    role: "Marketing Specialist",
+    bio: "Digital marketing expert specializing in SEO, social media strategy, and growth campaigns. Alishba drives Nyrogen's brand visibility and lead generation across global markets.",
+    photo: null,
+    initials: "AK",
+    color: "from-pink-600 to-pink-400",
   },
 ];
 
@@ -46,7 +64,7 @@ export default function AboutPage() {
       <div className="absolute inset-0 -z-10 grid-bg opacity-30" />
       <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-royal-blue/5 rounded-full blur-3xl -z-10" />
 
-      {/* ── Header ─────────────────────────────────────────── */}
+      {/* ── Header ─────────────────────────────────────── */}
       <section className="mb-20 text-center">
         <Container>
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
@@ -63,7 +81,7 @@ export default function AboutPage() {
         </Container>
       </section>
 
-      {/* ── Story + Mission / Vision ────────────────────────── */}
+      {/* ── Story + Mission / Vision ────────────────────── */}
       <section className="mb-24">
         <Container>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
@@ -120,11 +138,74 @@ export default function AboutPage() {
         </Container>
       </section>
 
-      {/* ── CEO MESSAGE ─────────────────────────────────────── */}
+      {/* ── TEAM ────────────────────────────────────────── */}
       <section className="mb-24 bg-charcoal-soft border-y border-charcoal-border py-24 relative overflow-hidden">
         <div className="absolute inset-0 -z-10 grid-bg opacity-20" />
-        <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_50%_60%_at_30%_50%,rgba(37,99,235,0.1),transparent)]" />
+        <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_60%_50%_at_50%_50%,rgba(37,99,235,0.08),transparent)]" />
 
+        <Container>
+          <div className="text-center mb-14">
+            <span className="text-accent-blue font-semibold text-sm uppercase tracking-widest">The Team</span>
+            <h2 className="text-4xl font-bold text-white mt-3 mb-4">
+              Meet the <span className="text-blue-gradient">People Behind Nyrogen</span>
+            </h2>
+            <p className="text-gray-400 max-w-2xl mx-auto">
+              World-class engineers, designers, and marketers committed to delivering exceptional digital products.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {team.map((member, idx) => (
+              <motion.div key={member.name}
+                initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }} transition={{ duration: 0.5, delay: idx * 0.1 }}
+              >
+                <div className="group rounded-3xl border border-charcoal-border bg-charcoal-card p-7 text-center hover:border-accent-blue/50 transition-all duration-300 hover:shadow-[0_0_36px_rgba(37,99,235,0.22)] relative overflow-hidden h-full">
+                  <div className="absolute inset-0 bg-gradient-to-br from-royal-blue/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <div className="relative z-10 flex flex-col items-center">
+
+                    {/* Avatar */}
+                    <div className="relative w-24 h-24 mx-auto mb-5">
+                      <div
+                        className="absolute rounded-full border border-accent-blue/25 group-hover:border-accent-blue/60 transition-colors animate-spin-slow"
+                        style={{ inset: "-6px" }}
+                      />
+                      <div className="w-24 h-24 rounded-full overflow-hidden border-2 border-royal-blue/30 group-hover:border-accent-blue/60 transition-colors relative">
+                        {member.photo ? (
+                          <Image
+                            src={member.photo}
+                            alt={member.name}
+                            fill
+                            className="object-cover object-top"
+                            sizes="96px"
+                          />
+                        ) : (
+                          <div className={`w-full h-full bg-gradient-to-br ${member.color} flex items-center justify-center`}>
+                            <span className="text-2xl font-bold text-white">{member.initials}</span>
+                          </div>
+                        )}
+                      </div>
+                    </div>
+
+                    <h3 className="text-lg font-bold text-white mb-1 group-hover:text-accent-blue transition-colors">
+                      {member.name}
+                    </h3>
+                    <span className="inline-block text-xs font-bold px-3 py-1 rounded-full border border-royal-blue/30 bg-royal-blue/10 text-accent-blue mb-4">
+                      {member.role}
+                    </span>
+                    <p className="text-sm text-gray-400 leading-relaxed group-hover:text-gray-300 transition-colors">
+                      {member.bio}
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </Container>
+      </section>
+
+      {/* ── CEO MESSAGE ─────────────────────────────────── */}
+      <section className="mb-24 relative overflow-hidden">
         <Container>
           <div className="text-center mb-14">
             <span className="text-accent-blue font-semibold text-sm uppercase tracking-widest">Leadership</span>
@@ -139,31 +220,20 @@ export default function AboutPage() {
               viewport={{ once: true }} transition={{ duration: 0.7 }}
             >
               <div className="relative rounded-3xl border border-charcoal-border bg-charcoal-card overflow-hidden hover:border-accent-blue/30 transition-all duration-300 hover:shadow-[0_0_50px_rgba(37,99,235,0.15)]">
-
-                {/* Top blue accent line */}
                 <div className="h-1 w-full bg-gradient-to-r from-royal-blue via-accent-blue to-light-blue" />
 
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-0">
-
-                  {/* CEO Photo side */}
+                  {/* Photo side */}
                   <div className="lg:col-span-4 relative min-h-[340px] overflow-hidden flex flex-col items-center justify-center bg-gradient-to-br from-royal-blue/10 to-charcoal p-10">
                     <div className="absolute inset-0 grid-bg opacity-15" />
-
-                    {/* Photo with ring */}
                     <div className="relative z-10">
                       <div className="relative w-44 h-44 mx-auto">
-                        {/* Outer animated ring */}
-                        <div
-                          className="absolute inset-0 rounded-full border-2 border-accent-blue/40 animate-spin-slow"
-                          style={{ margin: "-8px" }}
-                        />
-                        {/* Glow ring */}
+                        <div className="absolute inset-0 rounded-full border-2 border-accent-blue/40 animate-spin-slow" style={{ margin: "-8px" }} />
                         <div className="absolute inset-0 rounded-full shadow-[0_0_30px_rgba(37,99,235,0.5)]" />
-                        {/* Photo */}
                         <div className="w-44 h-44 rounded-full overflow-hidden border-4 border-royal-blue/50 relative">
                           <Image
                             src="/ceo-yousuf-asim.jpg"
-                            alt="Mr. Yousuf Asim – CEO Nyrogen Technologies"
+                            alt="Mr. Yousuf Asim – CEO"
                             fill
                             className="object-cover object-center"
                             sizes="176px"
@@ -171,12 +241,9 @@ export default function AboutPage() {
                           />
                         </div>
                       </div>
-
                       <div className="text-center mt-6">
                         <h3 className="text-xl font-bold text-white">Mr. Yousuf Asim</h3>
-                        <p className="text-accent-blue font-semibold text-sm mt-1 tracking-wide">
-                          Chief Executive Officer
-                        </p>
+                        <p className="text-accent-blue font-semibold text-sm mt-1 tracking-wide">Chief Executive Officer</p>
                         <p className="text-gray-400 text-xs mt-1">Nyrogen Technologies</p>
                       </div>
                     </div>
@@ -185,7 +252,6 @@ export default function AboutPage() {
                   {/* Message side */}
                   <div className="lg:col-span-8 p-8 md:p-12 flex flex-col justify-center">
                     <Quote className="text-royal-blue/40 mb-6" size={48} strokeWidth={1.5} />
-
                     <blockquote className="space-y-4 text-gray-300 text-lg leading-relaxed mb-8">
                       <p>
                         At Nyrogen Technologies, we believe that technology is not just a tool — it is the foundation
@@ -203,19 +269,15 @@ export default function AboutPage() {
                         Nyrogen promise — and it is one we deliver on every single day.
                       </p>
                     </blockquote>
-
                     <div className="flex items-center gap-4 pt-6 border-t border-charcoal-border">
                       <div>
                         <p className="font-bold text-white text-lg">Yousuf Asim</p>
                         <p className="text-accent-blue text-sm font-semibold">CEO &amp; Founder, Nyrogen Technologies</p>
                       </div>
-                      {/* Signature flourish */}
                       <div className="ml-auto hidden sm:block">
                         <svg width="120" height="40" viewBox="0 0 120 40" fill="none" className="opacity-40">
-                          <path d="M5 30 Q20 5 40 20 Q55 32 70 15 Q90 0 115 20"
-                            stroke="#3B82F6" strokeWidth="2" strokeLinecap="round" fill="none" />
-                          <path d="M10 35 Q30 28 50 32"
-                            stroke="#3B82F6" strokeWidth="1.5" strokeLinecap="round" fill="none" opacity="0.5"/>
+                          <path d="M5 30 Q20 5 40 20 Q55 32 70 15 Q90 0 115 20" stroke="#3B82F6" strokeWidth="2" strokeLinecap="round" fill="none" />
+                          <path d="M10 35 Q30 28 50 32" stroke="#3B82F6" strokeWidth="1.5" strokeLinecap="round" fill="none" opacity="0.5"/>
                         </svg>
                       </div>
                     </div>
@@ -227,8 +289,8 @@ export default function AboutPage() {
         </Container>
       </section>
 
-      {/* ── CORE VALUES ─────────────────────────────────────── */}
-      <section className="mb-24">
+      {/* ── CORE VALUES ─────────────────────────────────── */}
+      <section className="mb-24 bg-charcoal-soft border-y border-charcoal-border py-24">
         <Container>
           <div className="text-center mb-14">
             <span className="text-accent-blue font-semibold text-sm uppercase tracking-widest">Principles</span>
@@ -237,7 +299,6 @@ export default function AboutPage() {
             </h2>
             <p className="text-gray-400 max-w-2xl mx-auto">The principles that guide every decision we make and every line of code we write.</p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {values.map((v, idx) => (
               <motion.div key={v.title}
@@ -258,67 +319,7 @@ export default function AboutPage() {
         </Container>
       </section>
 
-      {/* ── TEAM ────────────────────────────────────────────── */}
-      <section className="mb-24 bg-charcoal-soft border-y border-charcoal-border py-24">
-        <Container>
-          <div className="text-center mb-14">
-            <span className="text-accent-blue font-semibold text-sm uppercase tracking-widest">The Team</span>
-            <h2 className="text-4xl font-bold text-white mt-3 mb-4">
-              Meet the <span className="text-blue-gradient">People Behind Nyrogen</span>
-            </h2>
-            <p className="text-gray-400 max-w-2xl mx-auto">
-              World-class engineers and leaders committed to delivering exceptional digital products.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-3xl mx-auto">
-            {team.map((member, idx) => (
-              <motion.div key={member.name}
-                initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }} transition={{ duration: 0.5, delay: idx * 0.1 }}
-              >
-                <div className="group rounded-3xl border border-charcoal-border bg-charcoal-card p-8 text-center hover:border-accent-blue/50 transition-all duration-300 hover:shadow-[0_0_36px_rgba(37,99,235,0.22)] relative overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-br from-royal-blue/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  <div className="relative z-10">
-
-                    {/* Avatar */}
-                    <div className="relative w-28 h-28 mx-auto mb-5">
-                      <div className="absolute inset-0 rounded-full border-2 border-accent-blue/30 group-hover:border-accent-blue/70 transition-colors animate-spin-slow" style={{ margin: "-6px" }} />
-                      <div className="w-28 h-28 rounded-full overflow-hidden border-3 border-royal-blue/40 group-hover:border-accent-blue/60 transition-colors relative">
-                        {member.photo ? (
-                          <Image
-                            src={member.photo}
-                            alt={member.name}
-                            fill
-                            className="object-cover object-center"
-                            sizes="112px"
-                          />
-                        ) : (
-                          <div className="w-full h-full bg-gradient-to-br from-royal-blue to-accent-blue flex items-center justify-center">
-                            <span className="text-3xl font-bold text-white">{member.initials}</span>
-                          </div>
-                        )}
-                      </div>
-                    </div>
-
-                    <h3 className="text-xl font-bold text-white mb-1 group-hover:text-accent-blue transition-colors">
-                      {member.name}
-                    </h3>
-                    <span className="inline-block text-xs font-bold px-3 py-1 rounded-full border border-royal-blue/30 bg-royal-blue/10 text-accent-blue mb-4">
-                      {member.role}
-                    </span>
-                    <p className="text-sm text-gray-400 leading-relaxed group-hover:text-gray-300 transition-colors">
-                      {member.bio}
-                    </p>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </Container>
-      </section>
-
-      {/* ── CTA ─────────────────────────────────────────────── */}
+      {/* ── CTA ─────────────────────────────────────────── */}
       <section>
         <Container>
           <motion.div
