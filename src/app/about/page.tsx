@@ -28,7 +28,7 @@ const team = [
     name: "Aslam Baig",
     role: "Laravel Developer",
     bio: "Skilled backend engineer specializing in Laravel, PHP, and CRM systems. Builds robust, scalable APIs and full-stack web applications powering Nyrogen's enterprise products.",
-    photo: aslam-baig.jpg,
+    photo: "aslam-baig.jpg",
     initials: "AB",
     color: "from-royal-blue to-accent-blue",
   },
@@ -222,7 +222,7 @@ export default function AboutPage() {
           </div>
         </Container>
       </section>
-      
+
 {/* ── CFO MESSAGE ─────────────────────────────────── */}
       <section className="mb-24 relative overflow-hidden">
         <Container>
