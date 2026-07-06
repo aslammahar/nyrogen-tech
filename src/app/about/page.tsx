@@ -25,15 +25,15 @@ const highlights = [
 
 const team = [
   {
-    name: "Aslam Baig",
+    name: "Irtiza",
     role: "Laravel Developer",
     bio: "Skilled backend engineer specializing in Laravel, PHP, and CRM systems. Builds robust, scalable APIs and full-stack web applications powering Nyrogen's enterprise products.",
-    photo: "/aslam-baig.jpg",
-    initials: "AB",
+    photo: null,
+    initials: "IR",
     color: "from-royal-blue to-accent-blue",
   },
   {
-    name: "Saeed",
+    name: "Saeed Ahmed",
     role: "Graphic Designer",
     bio: "Creative designer with a sharp eye for visual storytelling. Crafts stunning brand identities, UI components, and marketing assets that make Nyrogen's products stand out.",
     photo: null,
@@ -41,19 +41,19 @@ const team = [
     color: "from-purple-600 to-purple-400",
   },
   {
-    name: "Sara",
+    name: "Asad",
     role: "Sales Manager",
     bio: "Results-driven sales professional who builds lasting client relationships. Sara leads Nyrogen's sales pipeline and ensures every client finds the right solution for their needs.",
     photo: null,
-    initials: "S",
+    initials: "Asad",
     color: "from-emerald-600 to-emerald-400",
   },
   {
-    name: "Alishba Khan",
+    name: "Saim Khan",
     role: "Marketing Specialist",
     bio: "Digital marketing expert specializing in SEO, social media strategy, and growth campaigns. Alishba drives Nyrogen's brand visibility and lead generation across global markets.",
     photo: null,
-    initials: "AK",
+    initials: "SK",
     color: "from-pink-600 to-pink-400",
   },
 ];
@@ -166,8 +166,8 @@ export default function AboutPage() {
                         <div className="absolute inset-0 rounded-full shadow-[0_0_30px_rgba(37,99,235,0.5)]" />
                         <div className="w-44 h-44 rounded-full overflow-hidden border-4 border-royal-blue/50 relative">
                           <Image
-                            src="/ceo-yousuf-asim.jpg"
-                            alt="Mr. Yousuf Asim – CEO"
+                            src="/aslam-baig.jpg"
+                            alt="Mr. Aslam Baig – CEO"
                             fill
                             className="object-cover object-center"
                             sizes="176px"
@@ -176,7 +176,7 @@ export default function AboutPage() {
                         </div>
                       </div>
                       <div className="text-center mt-6">
-                        <h3 className="text-xl font-bold text-white">Mr. Yousuf Asim</h3>
+                        <h3 className="text-xl font-bold text-white">Mr. Aslam Baig</h3>
                         <p className="text-accent-blue font-semibold text-sm mt-1 tracking-wide">Chief Executive Officer</p>
                         <p className="text-gray-400 text-xs mt-1">Nyrogen Technologies</p>
                       </div>
@@ -205,7 +205,7 @@ export default function AboutPage() {
                     </blockquote>
                     <div className="flex items-center gap-4 pt-6 border-t border-charcoal-border">
                       <div>
-                        <p className="font-bold text-white text-lg">Yousuf Asim</p>
+                        <p className="font-bold text-white text-lg">Aslam Baig</p>
                         <p className="text-accent-blue text-sm font-semibold">CEO &amp; Founder, Nyrogen Technologies</p>
                       </div>
                       <div className="ml-auto hidden sm:block">
