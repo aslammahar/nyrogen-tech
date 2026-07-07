@@ -138,17 +138,18 @@ export default function AboutPage() {
         </Container>
       </section>
 
-      {/* ── CEO MESSAGE ─────────────────────────────────── */}
+     {/* ── LEADERSHIP MESSAGES (CEO + CFO) ─────────────────────────────────── */}
       <section className="mb-10 relative overflow-hidden">
         <Container>
           <div className="text-center mb-14">
             <span className="text-accent-blue font-semibold text-sm uppercase tracking-widest">Leadership</span>
             <h2 className="text-4xl font-bold text-white mt-3">
-              Message from the <span className="text-blue-gradient">CEO</span>
+              Message from our <span className="text-blue-gradient">Leadership</span>
             </h2>
           </div>
 
-          <div className="max-w-5xl mx-auto">
+          <div className="max-w-5xl mx-auto space-y-10">
+            {/* CEO Card */}
             <motion.div
               initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }} transition={{ duration: 0.7 }}
@@ -217,21 +218,8 @@ export default function AboutPage() {
                 </div>
               </div>
             </motion.div>
-          </div>
-        </Container>
-      </section>
 
-     {/* ── CFO MESSAGE ─────────────────────────────────── */}
-      <section className="mb-10 relative overflow-hidden">
-        <Container>
-          <div className="text-center mb-14">
-            <span className="text-accent-blue font-semibold text-sm uppercase tracking-widest">Leadership</span>
-            <h2 className="text-4xl font-bold text-white mt-3">
-              Message from the <span className="text-blue-gradient">CFO</span>
-            </h2>
-          </div>
-
-          <div className="max-w-5xl mx-auto">
+            {/* CFO Card */}
             <motion.div
               initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }} transition={{ duration: 0.7 }}
