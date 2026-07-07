@@ -221,80 +221,85 @@ export default function AboutPage() {
         </Container>
       </section>
 
-      {/* ── CFO SECTION (Aslam Baig) ────────────────────── */}
-      <section className="mb-24 relative overflow-hidden">
+     {/* ── CFO MESSAGE ─────────────────────────────────── */}
+      <section className="mb-10 relative overflow-hidden">
         <Container>
+          <div className="text-center mb-14">
+            <span className="text-accent-blue font-semibold text-sm uppercase tracking-widest">Leadership</span>
+            <h2 className="text-4xl font-bold text-white mt-3">
+              Message from the <span className="text-blue-gradient">CFO</span>
+            </h2>
+          </div>
+
           <div className="max-w-5xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }} transition={{ duration: 0.6 }}
+              initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }} transition={{ duration: 0.7 }}
             >
-              <div className="relative rounded-2xl border border-charcoal-border bg-charcoal-card overflow-hidden hover:border-accent-blue/30 transition-all duration-300 hover:shadow-[0_0_36px_rgba(37,99,235,0.15)]">
-                {/* thin accent line — slightly different shade to visually separate from CEO card */}
-                <div className="h-px w-full bg-gradient-to-r from-transparent via-accent-blue/50 to-transparent" />
-
+              <div className="relative rounded-3xl border border-charcoal-border bg-charcoal-card overflow-hidden hover:border-accent-blue/30 transition-all duration-300 hover:shadow-[0_0_50px_rgba(37,99,235,0.15)]">
+                <div className="h-1 w-full bg-gradient-to-r from-royal-blue via-accent-blue to-light-blue" />
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-0">
-
-                  {/* Message side — LEFT this time for visual variety */}
-                  <div className="lg:col-span-8 p-7 md:p-10 flex flex-col justify-center order-2 lg:order-1">
-                    <Quote className="text-royal-blue/30 mb-5" size={36} strokeWidth={1.5} />
-                    <blockquote className="space-y-3 text-gray-400 text-base leading-relaxed mb-7">
-                      <p>
-                        Technology is only as powerful as the team that builds it. At Nyrogen, I&apos;ve had the
-                        privilege of working alongside some of the brightest engineering minds to deliver products
-                        that truly solve real-world problems.
-                      </p>
-                      <p>
-                        From architecting scalable Laravel backends to integrating complex CRM workflows, my focus
-                        has always been on writing clean, maintainable code that stands the test of time. Every
-                        system we ship is built to grow with our clients — because that&apos;s what great software does.
-                      </p>
-                    </blockquote>
-                    <div className="flex items-center gap-4 pt-5 border-t border-charcoal-border">
-                      <div>
-                        <p className="font-bold text-white">Aslam Baig</p>
-                        <p className="text-accent-blue text-sm font-semibold">Chief Technology Officer, Nyrogen Technologies</p>
-                      </div>
-                      <div className="ml-auto hidden sm:block">
-                        <svg width="100" height="34" viewBox="0 0 100 34" fill="none" className="opacity-30">
-                          <path d="M4 25 Q18 4 34 18 Q46 28 58 12 Q75 0 96 18" stroke="#3B82F6" strokeWidth="1.8" strokeLinecap="round" fill="none" />
-                          <path d="M8 30 Q25 24 42 28" stroke="#3B82F6" strokeWidth="1.2" strokeLinecap="round" fill="none" opacity="0.5"/>
-                        </svg>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Photo side — RIGHT */}
-                  <div className="lg:col-span-4 relative min-h-[280px] overflow-hidden flex flex-col items-center justify-center bg-gradient-to-bl from-royal-blue/8 to-charcoal p-8 order-1 lg:order-2">
-                    <div className="absolute inset-0 grid-bg opacity-10" />
-                    <div className="relative z-10 text-center">
-                      <div className="relative w-32 h-32 mx-auto">
-                        <div className="absolute inset-0 rounded-full border border-accent-blue/30 animate-spin-slow" style={{ margin: "-6px" }} />
-                        <div className="w-32 h-32 rounded-full overflow-hidden border-2 border-royal-blue/40 relative shadow-[0_0_20px_rgba(37,99,235,0.35)]">
+                  {/* Photo side */}
+                  <div className="lg:col-span-4 relative min-h-[340px] overflow-hidden flex flex-col items-center justify-center bg-gradient-to-br from-royal-blue/10 to-charcoal p-10">
+                    <div className="absolute inset-0 grid-bg opacity-15" />
+                    <div className="relative z-10">
+                      <div className="relative w-44 h-44 mx-auto">
+                        <div className="absolute inset-0 rounded-full border-2 border-accent-blue/40 animate-spin-slow" style={{ margin: "-8px" }} />
+                        <div className="absolute inset-0 rounded-full shadow-[0_0_30px_rgba(37,99,235,0.5)]" />
+                        <div className="w-44 h-44 rounded-full overflow-hidden border-4 border-royal-blue/50 relative">
                           <Image
                             src="/aslam-baig.jpg"
-                            alt="Aslam Baig – CTO"
+                            alt="Mr. Aslam Baig – CFO"
                             fill
-                            className="object-cover object-top"
-                            sizes="128px"
+                            className="object-cover object-center"
+                            sizes="176px"
+                            priority
                           />
                         </div>
                       </div>
-                      <div className="mt-5">
-                        <h3 className="text-lg font-bold text-white">Aslam Baig</h3>
-                        <p className="text-accent-blue font-semibold text-xs mt-1 tracking-wide uppercase">Chief Technology Officer</p>
+                      <div className="text-center mt-6">
+                        <h3 className="text-xl font-bold text-white">Mr. Aslam Baig</h3>
+                        <p className="text-accent-blue font-semibold text-sm mt-1 tracking-wide">Chief Financial Officer</p>
                         <p className="text-gray-400 text-xs mt-1">Nyrogen Technologies</p>
                       </div>
                     </div>
                   </div>
-
+                  {/* Message side */}
+                  <div className="lg:col-span-8 p-8 md:p-12 flex flex-col justify-center">
+                    <Quote className="text-royal-blue/40 mb-6" size={48} strokeWidth={1.5} />
+                    <blockquote className="space-y-4 text-gray-300 text-lg leading-relaxed mb-8">
+                      <p>
+                        At Nyrogen Technologies, every product we build is backed by a simple financial
+                        principle: growth has to be sustainable, not just impressive. We invest in our
+                        engineers, our infrastructure, and our processes so that the value we deliver
+                        keeps compounding for our clients, not just for a single project cycle.
+                      </p>
+                      <p>
+                        We treat every client relationship as a long-term partnership, not a transaction —
+                        transparent pricing, honest timelines, and a relentless focus on measurable ROI.
+                        Because at the end of the day, our growth only means something if it&apos;s built
+                        on yours.
+                      </p>
+                    </blockquote>
+                    <div className="flex items-center gap-4 pt-6 border-t border-charcoal-border">
+                      <div>
+                        <p className="font-bold text-white text-lg">Aslam Baig</p>
+                        <p className="text-accent-blue text-sm font-semibold">CFO, Nyrogen Technologies</p>
+                      </div>
+                      <div className="ml-auto hidden sm:block">
+                        <svg width="120" height="40" viewBox="0 0 120 40" fill="none" className="opacity-40">
+                          <path d="M5 30 Q20 5 40 20 Q55 32 70 15 Q90 0 115 20" stroke="#3B82F6" strokeWidth="2" strokeLinecap="round" fill="none" />
+                          <path d="M10 35 Q30 28 50 32" stroke="#3B82F6" strokeWidth="1.5" strokeLinecap="round" fill="none" opacity="0.5"/>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </motion.div>
           </div>
         </Container>
       </section>
-
       {/* ── TEAM ────────────────────────────────────────── */}
       <section className="mb-24 bg-charcoal-soft border-y border-charcoal-border py-24 relative overflow-hidden">
         <div className="absolute inset-0 -z-10 grid-bg opacity-20" />
