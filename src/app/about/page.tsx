@@ -26,7 +26,7 @@ const highlights = [
 const team = [
   {
     name: "Aslam Baig",
-    role: "Laravel Developer",
+    role: " CFO & Laravel Developer",
     bio: "Skilled backend engineer specializing in Laravel, PHP, and CRM systems. Builds robust, scalable APIs and full-stack web applications powering Nyrogen's enterprise products.",
     photo: "/aslam-baig.jpg",
     initials: "AB",
@@ -41,19 +41,19 @@ const team = [
     color: "from-purple-600 to-purple-400",
   },
   {
-    name: "Sara Khan",
+    name: " Bilal Ahmed",
     role: "Sales Manager",
     bio: "Results-driven sales professional who builds lasting client relationships. Sara leads Nyrogen's sales pipeline and ensures every client finds the right solution.",
     photo: null,
-    initials: "SK",
+    initials: "BA",
     color: "from-emerald-600 to-emerald-400",
   },
   {
-    name: "Alishba Khan",
+    name: "Saim Khan",
     role: "Marketing Specialist",
     bio: "Digital marketing expert specializing in SEO, social media strategy, and growth campaigns. Drives Nyrogen's brand visibility and lead generation across global markets.",
     photo: null,
-    initials: "AK",
+    initials: "SK",
     color: "from-pink-600 to-pink-400",
   },
 ];
